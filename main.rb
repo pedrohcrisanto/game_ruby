@@ -42,7 +42,7 @@ loop  do
     first_round = round.hit(char_one)
     char_two.energy = char_two.energy - first_round[:damage].to_f
      
-    puts "#{first_round[:msg]} - #{first_round[:damage].to_f.round(2)} HP"
+    puts "#{first_round[:msg]} - #{first_round[:damage].to_f} HP"
   end
 
   if char_two.live?
@@ -51,17 +51,17 @@ loop  do
     second_round = round.hit(char_two)
     char_one.energy = char_one.energy - second_round[:damage].to_f
 
-    puts "#{second_round[:msg]} - #{second_round[:damage].to_f.round(2)} HP"
+    puts "#{second_round[:msg]} - #{second_round[:damage].to_f} HP"
   end
 
   if char_one.dead?
-    puts "O jogo acabou, o vencedor foi #{char_two.name} com HP restante de #{char_two.energy.round(2)}"
+    puts "O jogo acabou, o vencedor foi #{char_two.name} com HP restante de #{char_two.energy}"
 
     break
   end
 
   if char_two.dead?
-    puts "O jogo acabou, o vencedor foi #{char_one.name} com HP restante de #{char_one.energy.round(2)}"
+    puts "O jogo acabou, o vencedor foi #{char_one.name} com HP restante de #{char_one.energy}"
 
     break
   end
