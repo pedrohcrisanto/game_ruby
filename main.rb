@@ -41,11 +41,7 @@ loop  do
     first_round = round.hit(char_one)
     char_two.energy = char_two.energy - first_round[:damage].to_f
      
-<<<<<<< HEAD
     puts "#{first_round[:msg]} - #{first_round[:damage].to_f.} HP"
-=======
-    puts "#{first_round[:msg]} - #{first_round[:damage].to_f} HP"
->>>>>>> 7aaa4ed617f5e7f0535e577e8e551d26ac093e9c
   end
 
   if char_two.live?
@@ -54,11 +50,7 @@ loop  do
     second_round = round.hit(char_two)
     char_one.energy = char_one.energy - second_round[:damage].to_f
 
-<<<<<<< HEAD
     puts "#{second_round[:msg]} - #{second_round[:damage].to_f)} HP"
-=======
-    puts "#{second_round[:msg]} - #{second_round[:damage].to_f} HP"
->>>>>>> 7aaa4ed617f5e7f0535e577e8e551d26ac093e9c
   end
 
   if char_one.dead?
