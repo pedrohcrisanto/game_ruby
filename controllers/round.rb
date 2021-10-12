@@ -6,6 +6,8 @@ class Round
     return attack
   end
 
+private
+
   def damage(char)
     sort = rand(0..100)
     hash = { damage: "" , msg: "" }
